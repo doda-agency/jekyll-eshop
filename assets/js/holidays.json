@@ -1,0 +1,129 @@
+[
+  {
+    "id": "new-years-day",
+    "name": "New Year's Day",
+    "italian_name": "Capodanno",
+    "date": "2025-01-01",
+    "description": "The first day of the year is celebrated throughout Italy with fireworks, music, and special meals. Italians often celebrate with family and friends, enjoying traditional foods like lentils and cotechino (pork sausage) that symbolize good fortune and prosperity for the coming year.",
+    "is_national_holiday": true,
+    "slug": "new-years-day"
+  },
+  {
+    "id": "epiphany",
+    "name": "Epiphany",
+    "italian_name": "Epifania",
+    "date": "2025-01-06",
+    "description": "Epiphany marks the end of the Christmas season in Italy. According to tradition, an old woman called La Befana flies on her broomstick during the night of January 5 and fills children's stockings with candy and presents if they were good or coal if they were bad. This holiday has both religious significance and folkloric traditions.",
+    "is_national_holiday": true,
+    "slug": "epiphany"
+  },
+  {
+    "id": "carnival",
+    "name": "Carnival",
+    "italian_name": "Carnevale",
+    "date": "2025-02-25",
+    "description": "Carnival is celebrated across Italy before Lent begins, with the most famous celebrations taking place in Venice, Viareggio, and Ivrea. Festivities include elaborate masks, costumes, parades, and special foods like frittelle and chiacchiere (fried pastries).",
+    "is_national_holiday": false,
+    "slug": "carnival"
+  },
+  {
+    "id": "easter",
+    "name": "Easter Sunday",
+    "italian_name": "Pasqua",
+    "date": "2025-04-20",
+    "description": "Easter is one of the most important religious holidays in Italy. Celebrations include solemn processions, special church services, and family gatherings. Traditional foods include lamb, colomba (dove-shaped cake), and chocolate eggs with surprises inside.",
+    "is_national_holiday": true,
+    "slug": "easter"
+  },
+  {
+    "id": "easter-monday",
+    "name": "Easter Monday",
+    "italian_name": "Pasquetta",
+    "date": "2025-04-21",
+    "description": "The day after Easter is traditionally spent outdoors with friends and family, often enjoying picnics and excursions to the countryside. It's a day of relaxation and celebration following the religious observances of Easter.",
+    "is_national_holiday": true,
+    "slug": "easter-monday"
+  },
+  {
+    "id": "liberation-day",
+    "name": "Liberation Day",
+    "italian_name": "Festa della Liberazione",
+    "date": "2025-04-25",
+    "description": "This holiday commemorates the end of Nazi occupation during World War II and the victory of the Resistance. It's celebrated with parades, political rallies, and concerts throughout Italy.",
+    "is_national_holiday": true,
+    "slug": "liberation-day"
+  },
+  {
+    "id": "labor-day",
+    "name": "Labor Day",
+    "italian_name": "Festa dei Lavoratori",
+    "date": "2025-05-01",
+    "description": "International Workers' Day is celebrated with concerts, parades, and political rallies. The largest event is the Concerto del Primo Maggio, a free concert in Rome that attracts thousands of people.",
+    "is_national_holiday": true,
+    "slug": "labor-day"
+  },
+  {
+    "id": "republic-day",
+    "name": "Republic Day",
+    "italian_name": "Festa della Repubblica",
+    "date": "2025-06-02",
+    "description": "This holiday commemorates the referendum of 1946 when Italians voted to abolish the monarchy and establish a republic. The main celebration takes place in Rome with a military parade and flyover by the Frecce Tricolori (Italian Air Force aerobatic team).",
+    "is_national_holiday": true,
+    "slug": "republic-day"
+  },
+  {
+    "id": "ferragosto",
+    "name": "Assumption Day",
+    "italian_name": "Ferragosto",
+    "date": "2025-08-15",
+    "description": "Originally a harvest festival established by Emperor Augustus, Ferragosto now coincides with the Catholic feast of the Assumption of Mary. It's the peak of the Italian summer holiday season, with most businesses closed as Italians flock to the beaches and mountains.",
+    "is_national_holiday": true,
+    "slug": "ferragosto"
+  },
+  {
+    "id": "all-saints-day",
+    "name": "All Saints' Day",
+    "italian_name": "Tutti i Santi",
+    "date": "2025-11-01",
+    "description": "This religious holiday honors all Catholic saints. Italians typically visit cemeteries to pay respects to deceased family members, bringing flowers (especially chrysanthemums) to graves.",
+    "is_national_holiday": true,
+    "slug": "all-saints-day"
+  },
+  {
+    "id": "immaculate-conception",
+    "name": "Immaculate Conception",
+    "italian_name": "Immacolata Concezione",
+    "date": "2025-12-08",
+    "description": "This Catholic holiday celebrates the conception of the Virgin Mary. In Rome, the Pope leads a ceremony at the Spanish Steps, while throughout Italy, the day marks the unofficial start of the Christmas season with decorations and Christmas markets appearing.",
+    "is_national_holiday": true,
+    "slug": "immaculate-conception"
+  },
+  {
+    "id": "christmas",
+    "name": "Christmas",
+    "italian_name": "Natale",
+    "date": "2025-12-25",
+    "description": "Christmas is a major holiday in Italy, celebrated with religious services, family gatherings, and special meals. Traditions include setting up presepi (nativity scenes), exchanging gifts, and enjoying panettone and other traditional Christmas foods.",
+    "is_national_holiday": true,
+    "slug": "christmas"
+  },
+  {
+    "id": "saint-stephens-day",
+    "name": "Saint Stephen's Day",
+    "italian_name": "Santo Stefano",
+    "date": "2025-12-26",
+    "description": "The day after Christmas is also a national holiday in Italy, typically spent with family, continuing the celebrations and enjoying leftovers from Christmas dinner.",
+    "is_national_holiday": true,
+    "slug": "saint-stephens-day"
+  },
+  {
+    "id": "jubilee-2025",
+    "name": "Jubilee 2025",
+    "italian_name": "Giubileo 2025",
+    "date": "2024-12-24",
+    "end_date": "2026-01-06",
+    "description": "The Jubilee is a special holy year declared by the Catholic Church. The 2025 Jubilee will begin on Christmas Eve 2024 and continue through Epiphany 2026. During this time, millions of pilgrims will visit Rome to receive special blessings and indulgences.",
+    "is_national_holiday": false,
+    "slug": "jubilee-2025"
+  }
+]

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<div class="holiday-page">
+  <header class="holiday-header">
+    <div class="container">
+      <h1 class="holiday-title">{{ page.title }}</h1>
+      
+      {% if page.date %}
+      <div class="holiday-date">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      </div>
+      {% endif %}
+      
+      {% if page.description %}
+      <div class="holiday-description">
+        {{ page.description }}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  
+  <div class="holiday-content container">
+    <div class="holiday-info">
+      {{ content }}
+    </div>
+    
+    {% if page.countdown != false %}
+    <div class="holiday-countdown">
+      {% include countdown.html holiday=page %}
+    </div>
+    {% endif %}
+  </div>
+  
+  <section class="holiday-products">
+    <div class="container">
+      <h2>Products for {{ page.title }}</h2>
+      
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        {% for category in page.product_categories %}
+          <button class="filter-btn" data-filter="{{ category | slugify }}">{{ category }}</button>
+        {% endfor %}
+      </div>
+      
+      <div class="product-grid">
+        {% assign holiday_products = site.data.products | where: "holiday", page.holiday_id %}
+        {% for product in holiday_products %}
+          <div class="product-item" data-category="{{ product.category | slugify }}">
+            {% include product-card.html product=product %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+  {% if page.related_holidays %}
+  <section class="related-holidays">
+    <div class="container">
+      <h2>Related Holidays</h2>
+      
+      <div class="holidays-grid">
+        {% for holiday_id in page.related_holidays %}
+          {% assign related_holiday = site.pages | where: "holiday_id", holiday_id | first %}
+          {% if related_holiday %}
+            <div class="holiday-card">
+              <h3><a href="{{ related_holiday.url | relative_url }}">{{ related_holiday.title }}</a></h3>
+              <time datetime="{{ related_holiday.date | date_to_xmlschema }}">{{ related_holiday.date | date: "%B %d, %Y" }}</time>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</div>

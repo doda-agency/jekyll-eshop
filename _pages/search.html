@@ -1,0 +1,94 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<div class="search-page">
+  <div class="container">
+    <header class="search-header">
+      <h1>Search Products</h1>
+      <form id="search-form" class="search-form">
+        <div class="search-input-group">
+          <input type="text" id="search-input" name="q" placeholder="Search for products..." aria-label="Search for products" autocomplete="off">
+          <button type="submit" class="search-submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </div>
+      </form>
+    </header>
+    
+    <div class="search-filters">
+      <div class="filter-group">
+        <label for="holiday-filter">Holiday:</label>
+        <select id="holiday-filter" class="filter-select">
+          <option value="">All Holidays</option>
+          {% for holiday in site.data.holidays %}
+            <option value="{{ holiday.id }}">{{ holiday.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="date-filter">Date Range:</label>
+        <select id="date-filter" class="filter-select">
+          <option value="">All Time</option>
+          <option value="current">Current Holiday</option>
+          <option value="upcoming">Upcoming Holidays</option>
+          <option value="past">Past Holidays</option>
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="price-filter">Price Range:</label>
+        <select id="price-filter" class="filter-select">
+          <option value="">All Prices</option>
+          <option value="0-25">€0 - €25</option>
+          <option value="25-50">€25 - €50</option>
+          <option value="50-100">€50 - €100</option>
+          <option value="100+">€100+</option>
+        </select>
+      </div>
+      
+      <button id="reset-filters" class="btn btn-secondary">Reset Filters</button>
+    </div>
+    
+    <div id="search-results" class="search-results">
+      <div class="search-status">
+        <p id="search-count">Enter a search term to find products</p>
+      </div>
+      
+      <div id="results-grid" class="product-grid">
+        <!-- Search results will be dynamically inserted here -->
+      </div>
+      
+      <div id="no-results" class="no-results" style="display: none;">
+        <p>No products found matching your search criteria.</p>
+        <p>Try adjusting your filters or search term.</p>
+      </div>
+      
+      <div id="loading" class="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Searching products...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality will be implemented in main.js
+    // This will use the products.json data to filter and display results
+    console.log('Search page initialized');
+    
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('q');
+    
+    // If there's a search query in the URL, populate the search input
+    if (searchQuery) {
+      document.getElementById('search-input').value = searchQuery;
+      // The actual search will be triggered by main.js
+    }
+  });
+</script>

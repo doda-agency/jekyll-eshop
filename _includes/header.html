@@ -1,0 +1,41 @@
+<header class="site-header">
+  <div class="container">
+    <div class="site-branding">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <h1>{{ site.title }}</h1>
+      </a>
+    </div>
+    
+    <nav class="site-navigation">
+      <ul class="nav-menu">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Holidays</a>
+          <ul class="dropdown-menu">
+            {% for holiday in site.data.holidays %}
+              <li><a href="{{ '/holidays/' | append: holiday.slug | relative_url }}">{{ holiday.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li><a href="{{ '/pages/search.html' | relative_url }}">Search</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header-actions">
+      <button class="search-toggle" aria-label="Toggle search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="search-container">
+    <div class="container">
+      <form action="{{ '/pages/search.html' | relative_url }}" method="get" class="search-form">
+        <input type="text" name="q" placeholder="Search products..." aria-label="Search">
+        <button type="submit" aria-label="Submit search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</header>

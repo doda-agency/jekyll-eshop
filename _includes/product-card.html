@@ -1,0 +1,42 @@
+<div class="product-card" data-product-id="{{ product.id }}">
+  <div class="product-image">
+    <a href="{{ product.url | relative_url }}" class="product-link">
+      <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" loading="lazy">
+      {% if product.sale_price %}
+        <span class="product-badge sale">Sale</span>
+      {% endif %}
+      {% if product.is_new %}
+        <span class="product-badge new">New</span>
+      {% endif %}
+    </a>
+  </div>
+  
+  <div class="product-info">
+    <h3 class="product-title">
+      <a href="{{ product.url | relative_url }}">{{ product.name }}</a>
+    </h3>
+    
+    <div class="product-meta">
+      <span class="product-holiday">{{ product.holiday }}</span>
+      <span class="product-date">{{ product.date | date: "%b %d, %Y" }}</span>
+    </div>
+    
+    <div class="product-price">
+      {% if product.sale_price %}
+        <span class="price-original">€{{ product.price }}</span>
+        <span class="price-sale">€{{ product.sale_price }}</span>
+      {% else %}
+        <span class="price-regular">€{{ product.price }}</span>
+      {% endif %}
+    </div>
+    
+    <div class="product-actions">
+      <a href="{{ product.affiliate_link }}" class="btn btn-primary buy-now" target="_blank" rel="noopener">
+        Buy Now
+      </a>
+      <button class="btn btn-secondary add-to-wishlist" data-product-id="{{ product.id }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>

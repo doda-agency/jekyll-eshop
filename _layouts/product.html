@@ -1,0 +1,132 @@
+---
+layout: default
+---
+
+<div class="product-page">
+  <div class="container">
+    <div class="product-breadcrumbs">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+          {% if page.holiday %}
+            {% assign holiday_page = site.pages | where: "holiday_id", page.holiday | first %}
+            {% if holiday_page %}
+              <li class="breadcrumb-item"><a href="{{ holiday_page.url | relative_url }}">{{ holiday_page.title }}</a></li>
+            {% endif %}
+          {% endif %}
+          <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+        </ol>
+      </nav>
+    </div>
+    
+    <div class="product-content">
+      <div class="product-gallery">
+        <div class="product-main-image">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" id="main-product-image">
+        </div>
+        
+        {% if page.gallery %}
+        <div class="product-thumbnails">
+          <div class="thumbnail active" data-image="{{ page.image | relative_url }}">
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          </div>
+          {% for image in page.gallery %}
+          <div class="thumbnail" data-image="{{ image | relative_url }}">
+            <img src="{{ image | relative_url }}" alt="{{ page.title }} - Image {{ forloop.index }}">
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
+      <div class="product-details">
+        <h1 class="product-title">{{ page.title }}</h1>
+        
+        <div class="product-meta">
+          {% if page.holiday %}
+            {% assign holiday_page = site.pages | where: "holiday_id", page.holiday | first %}
+            {% if holiday_page %}
+              <span class="product-holiday">
+                <a href="{{ holiday_page.url | relative_url }}">{{ holiday_page.title }}</a>
+              </span>
+            {% endif %}
+          {% endif %}
+          
+          {% if page.date %}
+            <span class="product-date">{{ page.date | date: "%B %d, %Y" }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="product-price">
+          {% if page.sale_price %}
+            <span class="price-original">€{{ page.price }}</span>
+            <span class="price-sale">€{{ page.sale_price }}</span>
+            <span class="price-saving">Save {{ page.price | minus: page.sale_price | times: 100 | divided_by: page.price | round }}%</span>
+          {% else %}
+            <span class="price-regular">€{{ page.price }}</span>
+          {% endif %}
+        </div>
+        
+        <div class="product-description">
+          {{ content }}
+        </div>
+        
+        <div class="product-actions">
+          <a href="{{ page.affiliate_link }}" class="btn btn-primary btn-lg buy-now" target="_blank" rel="noopener">
+            Buy Now
+          </a>
+          <button class="btn btn-secondary btn-lg add-to-wishlist" data-product-id="{{ page.product_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            Add to Wishlist
+          </button>
+        </div>
+        
+        {% if page.features %}
+        <div class="product-features">
+          <h3>Features</h3>
+          <ul>
+            {% for feature in page.features %}
+              <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if page.related_products %}
+    <div class="related-products">
+      <h2>Related Products</h2>
+      <div class="product-grid">
+        {% for product_id in page.related_products %}
+          {% assign related_product = site.products | where: "product_id", product_id | first %}
+          {% if related_product %}
+            <div class="product-item">
+              {% include product-card.html product=related_product %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Product image gallery functionality
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('main-product-image');
+    
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        // Update active thumbnail
+        thumbnails.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Update main image
+        mainImage.src = this.getAttribute('data-image');
+      });
+    });
+  });
+</script>

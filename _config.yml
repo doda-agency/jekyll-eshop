@@ -1,0 +1,66 @@
+# Site settings
+title: Italian Holidays Shop
+email: info@italianholidaysshop.com
+description: >-
+  An e-commerce site featuring products for Italian holidays and celebrations.
+  Find the perfect gifts and decorations for every Italian festivity.
+baseurl: "/jekyll-italian-holidays-shop" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+  holidays:
+    output: true
+    permalink: /holidays/:path/
+
+# Include and exclude files/folders
+include:
+  - _pages
+
+# Default front matter settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_pages/holidays"
+      type: "pages"
+    values:
+      layout: "holiday"
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"
+
+# Pagination settings
+paginate: 12
+paginate_path: "/products/page:num/"
+
+# Sass settings
+sass:
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md

@@ -1,0 +1,32 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Italian Holidays Shop</h1>
+      <p>Find the perfect gifts and decorations for every Italian celebration</p>
+    </div>
+  </section>
+
+  <section class="countdown-section">
+    <h2>Next Italian Holiday</h2>
+    {% include countdown.html %}
+  </section>
+
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <!-- Products will be dynamically loaded from products.json -->
+    </div>
+  </section>
+
+  <section class="upcoming-holidays">
+    <h2>Upcoming Italian Holidays</h2>
+    <div class="holidays-list">
+      <!-- Holidays will be dynamically loaded from holidays.json -->
+    </div>
+  </section>
+</div>

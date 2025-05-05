@@ -1,0 +1,148 @@
+[
+  {
+    "id": "product-001",
+    "name": "Traditional Venetian Carnival Mask",
+    "description": "Authentic handcrafted Venetian mask for Carnival celebrations, made using traditional techniques.",
+    "price": 89.99,
+    "sale_price": null,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/venetian-mask.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/venetian-mask-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/venetian-mask-2.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/venetian-mask-3.jpg"
+    ],
+    "holiday": "carnival",
+    "date": "2025-02-25",
+    "category": "decorations",
+    "is_new": true,
+    "affiliate_link": "https://example.com/affiliate/venetian-mask",
+    "features": [
+      "Handcrafted in Venice",
+      "Made with traditional papier-mâché",
+      "Hand-painted with gold leaf accents",
+      "Includes display stand"
+    ],
+    "related_products": ["product-002", "product-003"]
+  },
+  {
+    "id": "product-002",
+    "name": "Italian Easter Colomba Cake",
+    "description": "Traditional dove-shaped Easter cake with candied orange peel and almonds, freshly baked and shipped directly from Italy.",
+    "price": 34.99,
+    "sale_price": null,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/colomba-cake.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/colomba-cake-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/colomba-cake-2.jpg"
+    ],
+    "holiday": "easter",
+    "date": "2025-04-20",
+    "category": "food",
+    "is_new": true,
+    "affiliate_link": "https://example.com/affiliate/colomba-cake",
+    "features": [
+      "Authentic Italian recipe",
+      "Made with premium ingredients",
+      "No preservatives",
+      "Elegant gift packaging"
+    ],
+    "related_products": ["product-004", "product-005"]
+  },
+  {
+    "id": "product-003",
+    "name": "Italian Republic Day Flag Set",
+    "description": "High-quality Italian flag set for Republic Day celebrations, including a full-size flag and decorative bunting.",
+    "price": 24.99,
+    "sale_price": 19.99,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/italian-flag-set.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/italian-flag-set-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/italian-flag-set-2.jpg"
+    ],
+    "holiday": "republic-day",
+    "date": "2025-06-02",
+    "category": "decorations",
+    "is_new": false,
+    "affiliate_link": "https://example.com/affiliate/italian-flag-set",
+    "features": [
+      "100% weather-resistant polyester",
+      "Vibrant, fade-resistant colors",
+      "Includes mounting hardware",
+      "5 meters of decorative bunting"
+    ],
+    "related_products": ["product-006", "product-007"]
+  },
+  {
+    "id": "product-004",
+    "name": "Ferragosto Beach Kit",
+    "description": "Complete beach kit for Ferragosto celebrations, including a stylish beach towel, umbrella, and cooler bag.",
+    "price": 59.99,
+    "sale_price": null,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/beach-kit.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/beach-kit-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/beach-kit-2.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/beach-kit-3.jpg"
+    ],
+    "holiday": "ferragosto",
+    "date": "2025-08-15",
+    "category": "accessories",
+    "is_new": true,
+    "affiliate_link": "https://example.com/affiliate/beach-kit",
+    "features": [
+      "Large microfiber beach towel (180x100cm)",
+      "UV-protective beach umbrella",
+      "Insulated cooler bag",
+      "Waterproof phone pouch"
+    ],
+    "related_products": ["product-008", "product-009"]
+  },
+  {
+    "id": "product-005",
+    "name": "Premium Italian Panettone",
+    "description": "Luxury Christmas panettone made with a traditional recipe, featuring candied fruits and raisins in a soft, fluffy dough.",
+    "price": 42.99,
+    "sale_price": null,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/panettone.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/panettone-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/panettone-2.jpg"
+    ],
+    "holiday": "christmas",
+    "date": "2025-12-25",
+    "category": "food",
+    "is_new": false,
+    "affiliate_link": "https://example.com/affiliate/panettone",
+    "features": [
+      "1kg traditional recipe",
+      "Made with natural sourdough starter",
+      "Premium packaging",
+      "Long shelf life (3 months)"
+    ],
+    "related_products": ["product-010", "product-011"]
+  },
+  {
+    "id": "product-006",
+    "name": "La Befana Decoration",
+    "description": "Traditional handcrafted La Befana witch decoration for Epiphany celebrations, made by Italian artisans.",
+    "price": 29.99,
+    "sale_price": null,
+    "image": "/jekyll-italian-holidays-shop/assets/images/products/befana-decoration.jpg",
+    "gallery": [
+      "/jekyll-italian-holidays-shop/assets/images/products/befana-decoration-1.jpg",
+      "/jekyll-italian-holidays-shop/assets/images/products/befana-decoration-2.jpg"
+    ],
+    "holiday": "epiphany",
+    "date": "2025-01-06",
+    "category": "decorations",
+    "is_new": true,
+    "affiliate_link": "https://example.com/affiliate/befana-decoration",
+    "features": [
+      "Handmade in Italy",
+      "30cm tall figurine",
+      "Made with traditional materials",
+      "Includes hanging string"
+    ],
+    "related_products": ["product-012", "product-013"]
+  }
+]
