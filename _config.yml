@@ -4,8 +4,8 @@ email: info@italianholidaysshop.com
 description: >-
   An e-commerce site featuring products for Italian holidays and celebrations.
   Find the perfect gifts and decorations for every Italian festivity.
-baseurl: "/jekyll-italian-holidays-shop" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-eshop" # the subpath of your site, e.g. /blog
+url: "https://doda-agency.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
